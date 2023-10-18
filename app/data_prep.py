@@ -30,7 +30,11 @@ class DataPrep:
 
     def img_to_mnist(self, img):
         image = cv2.imdecode(img, cv2.IMREAD_GRAYSCALE)
-        #_ ,image = cv2.threshold(image, 128, 255, cv2.THRESH_BINARY_INV)
+        #_ ,image = cv2.threshold(image, 128, 0, cv2.THRESH_BINARY_INV)
+        #image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+        cv2.imwrite('original.jpg', image)
+        print('original image shpe: ', image.shape)
 
         size = min(image.shape)
         size = size if size >= 28 else 28
@@ -38,7 +42,7 @@ class DataPrep:
         resized_img = cv2.resize(resized_img, (28, 28), interpolation=cv2.INTER_LINEAR)
 
 
-        cv2.imwrite('result_img.jpg', resized_img)
+        cv2.imwrite('resized.jpg', resized_img)
         print("img shape: ", resized_img.shape)
 
         resized_img = cv2.bitwise_not(resized_img)

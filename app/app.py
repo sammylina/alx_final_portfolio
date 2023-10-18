@@ -3,6 +3,7 @@
 """
 
 from fastapi import FastAPI, File, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
 from data_prep import DataPrep
 from torchvision import transforms
 import numpy as np
@@ -14,6 +15,15 @@ import logging as logger
 app = FastAPI()
 prep = DataPrep(['png', 'jpg'])
 from model import load_model, inference
+
+origins = ['http://localhost:5173']
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=['*'],
+    allow_headers=['*']
+)
 
 checkpoint = 'best_model_89.pth'
 classifier = load_model(checkpoint)
