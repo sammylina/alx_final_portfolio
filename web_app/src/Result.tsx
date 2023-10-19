@@ -8,25 +8,27 @@ type ResultProps = {
 const Result: React.FC<ResultProps> = ({predictions}) => {
 
     return (
-        <>
-            <h3>Prediction Result:-</h3>
+        <ul className='divide-y divide-cyan-300 mr-16'>
             {predictions.map(pred => <CharacterPrediction prediction={pred} key={pred.unicode_point}/> )}
-        </>
+        </ul>
     )
 }
 
 const CharacterPrediction = ({prediction }: any) => {
-    const {certainity} = prediction
+    let {certainity} = prediction
+    certainity = Number.parseFloat(certainity)
+    certainity *= 100
+    console.log('certainity: ', certainity)
     return (
-        <div className='container mx-auto'>
-            <div>
+        <li className='bg-cyan-700 first:ml-0 ml-8 px-4  py-2 flex space-x-6 items-center rounded'>
+            <div className='h-10 w-10 border border-white rounded text-center text-3xl font-thin bg-cyan-600 text-slate-50'>
                 {prediction.character}
             </div> 
-            <div>
-                <progress max='1' value={certainity}>{Number(certainity) * 100} %</progress>
-                <span>{certainity}</span>
+            <div className='space-x-4'>
+                <progress className='[&::-webkit-progress-value]:bg-cyan-400 [&::-webkit-progress-bar]:bg-slate-700 border border-cyan-400 rounded-full border-2 h-3 ' max='100' value={certainity}></progress>
             </div>
-        </div>
+            <span className='text-slate-100 font-bold'>{certainity.toFixed(1)}%</span>
+        </li>
     )
 }
 

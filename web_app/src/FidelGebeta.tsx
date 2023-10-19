@@ -22,14 +22,17 @@ const FidelGebeta: React.FC = () => {
     }
 
     return (
-        <div className='grid grid-cols-7 gap-1'>
+        <div className='grid grid-cols-7 gap-y-1 gap-x-0 overflow-y-auto max-h-screen pb-32'>
             {
                 generateFidels().map((fidel, idx) => {
-                    return <div key={idx}>{fidel}</div>
+                    return (
+                        <div className='rounded-lg hover:bg-cyan-500 hover:text-black bg-cyan-700 h-12 w-12 text-center text-slate-200 text-4xl' key={idx}>{fidel}</div>
+                    )
                 })
             }
         </div>
     )
 }
+
 
 export default FidelGebeta

@@ -94,21 +94,22 @@ const Drawer = ({canvasRef, getPredictions}: ChildComponentsProps) => {
 
 
     return (
-        <div className=''>
+        <div className='space-y-4 mt-16'>
             <div>
 
                 <canvas ref={canvasRef}
-                    width={250}
-                    height={250}
+                    width={200}
+                    height={200}
                     onMouseDown={startDrawing}
                     onMouseUp={endDrawing}
                     onMouseMove={draw}
-                    style={{border: '1px solid black'}}
+                    className='rounded-xl'
                 ></canvas>
             </div>
-            <div className='conatiner center'>
-                <button onClick={clearCanvas}>Clear</button>
-                <button onClick={captureCanvas}>Perdict</button>
+            <p className='text-lg font-thin text-slate-100 text-center '>Draw Here</p>
+            <div className='space-x-4 text-center'>
+                <button className='py-3 px-6 rounded-lg text-md bg-cyan-800 text-slate-200 outline-none' onClick={clearCanvas}>Clear</button>
+                <button className='py-3 px-6 rounded-lg text-md bg-cyan-800 text-slate-200 outline-none' onClick={captureCanvas}>Predict</button>
             </div>
         </div>
     )
