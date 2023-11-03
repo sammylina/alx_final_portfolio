@@ -38,6 +38,6 @@ Send request using `curl`
 curl localhost:{backend_port}/predict -X POST -F "req=@{path_to_img}.png"
 ```
 Sample reponse
-[](https://drive.google.com/file/d/1_EIgsTD4Wma8fplZNPW00OvECCrxdd6A/view?usp=drive_link)
+[curl response](https://drive.google.com/file/d/1_EIgsTD4Wma8fplZNPW00OvECCrxdd6A/view?usp=drive_link)
 
 ## Contributing
