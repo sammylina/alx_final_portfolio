@@ -9,12 +9,13 @@ This is ALX final webstack portfolio using that can recognize Amharic hand-writt
 ## Installation
 
 Clone the project
-> `git clone git@github.com:sammylina/alx_final_portfolio.git`
+`git clone git@github.com:sammylina/alx_final_portfolio.git`
 
 Setup backend (FastAPI)
->    `cd app  # This is backend of the application`
->	`pip install -r requirements.txt`
->   `uvicorn main:app --reload`
+```cd app  # This is backend of the application`
+  pip install -r requirements.txt
+  uvicorn main:app --reload
+```
 
 Setup Frontend (React)
 >  `cd web_app`
