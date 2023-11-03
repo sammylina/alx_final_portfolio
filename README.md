@@ -4,7 +4,7 @@ This is ALX final webstack portfolio project that can recognize Amharic hand-wri
 
 > The ML model has **89%** accuracy on test dataset
 
-[](https://drive.google.com/file/d/1hpE2opLnsdBOLHzpadhnskCUkSnT7cYC/view?usp=drive_link)
+![img](https://drive.google.com/file/d/1hpE2opLnsdBOLHzpadhnskCUkSnT7cYC/view?usp=drive_link)
 
 [Project Demo](https://www.youtube.com/watch?v=iKe9svemECw)
 
