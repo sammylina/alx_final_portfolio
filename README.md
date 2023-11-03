@@ -1,8 +1,8 @@
 # Amharic hand-written character recognition
 
-This is ALX final webstack portfolio using that can recognize Amharic hand-written characters using `**Convolutional Neural Network**` architecture and **Fast API** backend and **React** frontend for easy use
+This is ALX final webstack portfolio using that can recognize Amharic hand-written characters using **Convolutional Neural Network** architecture and **Fast API** backend and **React** frontend for easy use
 
-> The model has 89% accuracy on test dataset
+> The ML model has **89%** accuracy on test dataset
 
 [Project Demo](https://www.youtube.com/watch?v=iKe9svemECw)
 
@@ -10,7 +10,7 @@ This is ALX final webstack portfolio using that can recognize Amharic hand-writt
 
 Clone the project
 ```bash
-git clone git@github.com:sammylina/alx_final_portfolio.git
+git clone https://github.com/sammylina/alx_final_portfolio.git
 ```
 
 Setup backend (FastAPI)
@@ -33,7 +33,7 @@ You can see the application running on `localhost:5173`
 
 Send request using `curl`
 ```bash
-curl localhost:{backend_port}/predict -X POST -F "req=@{path_to_img}png"
+curl localhost:{backend_port}/predict -X POST -F "req=@{path_to_img}.png"
 ```
 
 ## Contributing
