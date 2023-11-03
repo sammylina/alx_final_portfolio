@@ -3,8 +3,7 @@
 This is ALX final webstack portfolio project that can recognize Amharic hand-written characters using **Convolutional Neural Network** architecture, **Fast API** backend and **React** frontend for easy use
 
 > The ML model has **89%** accuracy on test dataset
-
-![img](https://drive.google.com/file/d/1hpE2opLnsdBOLHzpadhnskCUkSnT7cYC/view?usp=drive_link)
+![predict_amharic_char](https://github.com/sammylina/alx_final_portfolio/assets/88908872/e6668152-20b2-49b0-88c5-9986d539c8eb)
 
 [Project Demo](https://www.youtube.com/watch?v=iKe9svemECw)
 
@@ -33,11 +32,13 @@ You can see the application running on `localhost:5173`
 
 ## Usage
 
-Send request using `curl`
+Send a request using `curl`
 ```bash
 curl localhost:{backend_port}/predict -X POST -F "req=@{path_to_img}.png"
 ```
-Sample reponse
-[curl response](https://drive.google.com/file/d/1_EIgsTD4Wma8fplZNPW00OvECCrxdd6A/view?usp=drive_link)
+Sample response
+
+![curl_response](https://github.com/sammylina/alx_final_portfolio/assets/88908872/74d02771-bc9b-42a4-bbdf-a33e64d4ddc3)
+
 
 ## Contributing
