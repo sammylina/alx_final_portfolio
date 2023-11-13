@@ -50,7 +50,7 @@ const Drawer = ({canvasRef, getPredictions}: ChildComponentsProps) => {
                     const formData = new FormData();
                     formData.append('req', blob, 'new_image.png')
 
-                    fetch('http://127.0.0.1:8000/predict', {
+                    fetch(`${import.meta.env.VITE_API_URL}:8000/predict`, {
                         method: 'POST',
                         body: formData
                     })
