@@ -1,4 +1,4 @@
-uvicorn==0.23.*
+uvicorn==0.21.0
 torch==2.0.*
 torchaudio==2.0.*
 torchvision==0.15.*
