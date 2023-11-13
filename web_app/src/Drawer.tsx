@@ -50,7 +50,7 @@ const Drawer = ({canvasRef, getPredictions}: ChildComponentsProps) => {
                     const formData = new FormData();
                     formData.append('req', blob, 'new_image.png')
 
-                    fetch(`${import.meta.env.VITE_API_URL}/predict`, {
+                    fetch('https://abeni-103a.onrender.com/predict', {
                         method: 'POST',
                         body: formData
                     })
