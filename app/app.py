@@ -16,7 +16,7 @@ app = FastAPI()
 prep = DataPrep(['png', 'jpg'])
 from model import load_model, inference
 
-origins = ['https://abeni-103a.onrender.com']
+origins = ['*']
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
