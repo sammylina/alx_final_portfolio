@@ -2,6 +2,10 @@ FROM python:3.9
 
 WORKDIR /code
 
+ENV PYTHONDONTWRITEBYTECODE 1
+
+ENV PYTHONBUFFERED 1
+
 RUN chown -R root:root /code
 
 RUN chmod -R 777 /code
@@ -16,6 +20,8 @@ RUN apt-get update && apt-get install -y libgl1-mesa-glx
 
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
-COPY . /code/
+COPY ./app /code/app
+
+EXPOSE 8000
 
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
