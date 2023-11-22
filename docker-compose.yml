@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./app/
+      dockerfile: ./Dockerfile
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "127.0.0.1:8000:80"
+
+  frontend:
+    build:
+      context: ./web_app/
+      dockerfile: ./Dockerfile
+    ports:
+      - "127.0.0.1:8000:80"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      - backend
+
+volumes:
+  caddy-data:
+  caddy-config:
