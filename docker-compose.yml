@@ -1,5 +1,4 @@
-version: '3.8'
-
+version: '3.3'
 services:
   backend:
     build:
@@ -14,7 +13,7 @@ services:
       context: ./web_app/
       dockerfile: ./Dockerfile
     ports:
-      - "127.0.0.1:8000:80"
+      - "127.0.0.1:3000:80"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
       - caddy-data:/data
